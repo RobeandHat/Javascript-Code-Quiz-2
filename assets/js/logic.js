@@ -53,7 +53,7 @@ function getQuestion() {
     newButton.setAttribute("onclick", "questionClick(event)")
       
     });
-    // display on the page
+    
     
   };
 
@@ -96,9 +96,9 @@ function quizEnd() {
   // stop timer
   clearInterval(timerId);
   // show end screen
-  document.getElementById("end-screen").style.display= "block";
+  document.getElementById("end-screen").style.display= "inline-block";
   // show final score
-  document.getElementById("final-score").innerHTML= score
+  document.getElementById("final-score").innerHTML = score
   // hide questions section
   questionsEl.style.display = "none";
 }
@@ -116,7 +116,7 @@ function clockTick() {
 
 function saveHighscore() {
   // get value of input box
-  var initials = initialsEl.nodeValue
+  var initials = initialsEl.value
   // make sure value wasn't empty
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
@@ -134,11 +134,12 @@ function saveHighscore() {
     // redirect to next page
     window.location.href = "highscores.html";
   }
+  else {alert ("Please enter your initials")}
 }
 
 function checkForEnter(event) {
   // "13" represents the enter key
-  if (event.key === "Enter") {
+  if (window.event.keyCode == 13) {
     saveHighscore();
   }
 }
