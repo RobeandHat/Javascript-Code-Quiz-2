@@ -15,5 +15,7 @@ This is code for a short timed quiz on javascript. It features dynamically creat
 
 ![Highscores](https://github.com/RobeandHat/Javascript-Code-Quiz-2/blob/main/assets/Images/Highscores.jpg)
 
+### Citation
+Starter code was provided to the class by my professor, Alper
 
 
